@@ -90,7 +90,7 @@ export default function DemoRAGPage() {
                             </div>
                         </CardHeader>
                         <CardContent className="text-center max-w-2xl mx-auto">
-                            <p className="text-lg font-medium mt-4">"{result.reasoning}"</p>
+                                <p className="text-lg font-medium mt-4">&quot;{result.reasoning}&quot;</p>
                             <div className="mt-4 flex justify-center items-center gap-2 text-sm text-muted-foreground">
                                 <span>Confidence Score:</span>
                                 <span className="font-bold text-foreground">{(result.confidence_score * 100).toFixed(0)}%</span>

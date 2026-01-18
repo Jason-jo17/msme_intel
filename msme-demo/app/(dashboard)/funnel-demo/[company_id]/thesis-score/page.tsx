@@ -148,11 +148,11 @@ export default function DemoThesisScorePage() {
                         <CardContent className="grid gap-4 md:grid-cols-2">
                             <div className="bg-muted/30 p-4 rounded-lg">
                                 <h4 className="font-semibold mb-2 flex items-center gap-2">🚀 Growth Potential</h4>
-                                <p className="text-sm text-muted-foreground italic">"{result.scoring_rationale.growth_potential}"</p>
+                                        <p className="text-sm text-muted-foreground italic">&quot;{result.scoring_rationale.growth_potential}&quot;</p>
                             </div>
                             <div className="bg-muted/30 p-4 rounded-lg">
                                 <h4 className="font-semibold mb-2 flex items-center gap-2">🏛️ Policy Advantage</h4>
-                                <p className="text-sm text-muted-foreground italic">"{result.scoring_rationale.policy_advantages}"</p>
+                                        <p className="text-sm text-muted-foreground italic">&quot;{result.scoring_rationale.policy_advantages}&quot;</p>
                             </div>
                         </CardContent>
                     </Card>

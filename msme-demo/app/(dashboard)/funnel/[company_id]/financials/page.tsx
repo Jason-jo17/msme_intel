@@ -44,7 +44,7 @@ export default function FinancialsPage() {
                     <CardHeader>
                         <CardTitle>Enter Financial Data</CardTitle>
                         <CardDescription>
-                            Input latest fiscal year data. We'll cross-reference with MCA where possible.
+                            Input latest fiscal year data. We&apos;ll cross-reference with MCA where possible.
                         </CardDescription>
                     </CardHeader>
                     <CardContent className="space-y-4">
