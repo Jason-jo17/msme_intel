@@ -115,4 +115,11 @@ export interface SectorThesis {
 
     // New: List of all citations used in this thesis
     citations?: Citation[];
+
+    // New: Featured companies for tagging
+    emerging_companies?: {
+        id: string;
+        name: string;
+        description?: string;
+    }[];
 }

@@ -67,9 +67,11 @@ export async function getSectorDistribution(): Promise<SectorDistribution[]> {
     await new Promise(resolve => setTimeout(resolve, 500));
 
     return [
-        { sector: 'advanced_manufacturing', count: 10, percentage: 33.3, total_value: 45.2, avg_score: 72 },
-        { sector: 'fintech', count: 10, percentage: 33.3, total_value: 30.5, avg_score: 85 },
-        { sector: 'agritech', count: 10, percentage: 33.3, total_value: 9.7, avg_score: 68 },
+        { sector: 'digital_services', count: 3, percentage: 23.0, total_value: 15.2, avg_score: 75 },
+        { sector: 'financial_services', count: 4, percentage: 30.7, total_value: 42.5, avg_score: 82 },
+        { sector: 'talent_acquisition', count: 2, percentage: 15.3, total_value: 8.7, avg_score: 68 },
+        { sector: 'marketing', count: 2, percentage: 15.3, total_value: 5.4, avg_score: 71 },
+        { sector: 'legal_ip', count: 2, percentage: 15.3, total_value: 12.1, avg_score: 88 },
     ];
 }
 

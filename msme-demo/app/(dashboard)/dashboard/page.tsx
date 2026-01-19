@@ -19,7 +19,7 @@ import { FunnelConversionChart } from "@/components/dashboard/funnel-conversion-
 import { GeographicHeatmap } from "@/components/dashboard/geographic-heatmap"
 import { MetricCard } from "@/components/dashboard/metric-card"
 import { QuickActions } from "@/components/dashboard/quick-actions"
-import { RAGStatusChart } from "@/components/dashboard/rag-status-chart"
+import { EnrolledEcosystemsChart } from "@/components/ecosystem/ecosystem-stats"
 import { RecentActivityFeed } from "@/components/dashboard/recent-activity-feed"
 import { SectorDistributionChart } from "@/components/dashboard/sector-distribution-chart"
 import { TopPerformersList } from "@/components/dashboard/top-performers-list"
@@ -28,7 +28,6 @@ import {
     getMarketShareGrowthData,
     getFunnelConversionData,
     getGeographicDistribution,
-    getRAGDistribution,
     getRecentActivity,
     getSectorDistribution,
     getTopPerformers,
@@ -68,10 +67,6 @@ export default function DashboardPage() {
         queryFn: () => getSectorDistribution(),
     })
 
-    const { data: ragData } = useQuery({
-        queryKey: ["rag-distribution", filters],
-        queryFn: () => getRAGDistribution(),
-    })
 
     const { data: topPerformers } = useQuery({
         queryKey: ["top-performers", filters],
@@ -194,15 +189,9 @@ export default function DashboardPage() {
                     {marketData && <MarketShareGrowthChart data={marketData} />}
                 </Card>
 
-                <Card className="p-6">
-                    <div className="mb-4">
-                        <h3 className="text-lg font-semibold">RAG Classification</h3>
-                        <p className="text-sm text-muted-foreground">
-                            Company distribution by fit level
-                        </p>
-                    </div>
-                    {ragData && <RAGStatusChart data={ragData} />}
-                </Card>
+                <div className="h-full">
+                    <EnrolledEcosystemsChart />
+                </div>
             </div>
 
             {/* Bottom Row: Top Performers, Recent Activity, Geographic */}

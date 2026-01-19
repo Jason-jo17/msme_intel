@@ -247,6 +247,37 @@ export function SectorThesisDetail({ thesis }: SectorThesisDetailProps) {
                 </TabsContent>
 
                 <TabsContent value="ecosystem" className="space-y-6">
+                    {/* Emerging Companies (New) */}
+                    {thesis.emerging_companies && thesis.emerging_companies.length > 0 && (
+                        <Card className="border-l-4 border-l-blue-500">
+                            <CardHeader>
+                                <CardTitle className="flex items-center gap-2">
+                                    <Target className="h-5 w-5 text-blue-600" />
+                                    Featured Emerging Leaders
+                                </CardTitle>
+                                <CardDescription>High-growth companies driving innovation in this sector.</CardDescription>
+                            </CardHeader>
+                            <CardContent>
+                                <div className="grid gap-4 md:grid-cols-3">
+                                    {thesis.emerging_companies.map((company, idx) => (
+                                        <a key={idx} href={`/companies/${company.id}`} className="block group">
+                                            <div className="p-4 rounded-lg border bg-white hover:border-blue-300 hover:shadow-md transition-all">
+                                                <div className="flex justify-between items-start mb-2">
+                                                    <h4 className="font-semibold text-sm group-hover:text-blue-700">{company.name}</h4>
+                                                    <Badge variant="outline" className="text-[10px]">Active</Badge>
+                                                </div>
+                                                <p className="text-xs text-muted-foreground line-clamp-2">{company.description}</p>
+                                                <div className="mt-3 text-xs font-medium text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity">
+                                                    View Profile →
+                                                </div>
+                                            </div>
+                                        </a>
+                                    ))}
+                                </div>
+                            </CardContent>
+                        </Card>
+                    )}
+
                     <Card>
                         <CardHeader>
                             <CardTitle>Competitive Landscape</CardTitle>

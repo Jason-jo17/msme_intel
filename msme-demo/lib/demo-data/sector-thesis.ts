@@ -243,6 +243,12 @@ export const SECTOR_THESES: Record<string, SectorThesis> = {
             { year: 2030, market_size: 70000, growth_rate: 10, citation_ids: ['c1'] }
         ],
 
+        emerging_companies: [
+            { id: 'aeq-001', name: 'Aequs Limited', description: 'Precision aerospace manufacturing' },
+            { id: 'dyn-001', name: 'Dynamatic Technologies', description: 'Aerostructures and hydraulics' },
+            { id: 'taal-001', name: 'Taneja Aerospace', description: 'Aviation structural assemblies' }
+        ],
+
         citations: Object.values(CITATIONS).filter(c => c.id.startsWith('c'))
     },
 
