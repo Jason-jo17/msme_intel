@@ -6,7 +6,8 @@ import {
     RAGDistribution,
     TopPerformer,
     RecentActivity,
-    GeographicDistribution
+    GeographicDistribution,
+    MarketShareGrowthData
 } from '@/lib/types/dashboard';
 import { DEMO_COMPANIES } from './companies';
 
@@ -168,4 +169,33 @@ export async function getGeographicDistribution(): Promise<GeographicDistributio
         { state: 'Gujarat', count: 2, total_value: 4.5, avg_score: 65 },
         { state: 'Delhi', count: 1, total_value: 2.1, avg_score: 88 },
     ];
+}
+
+export async function getMarketShareGrowthData(): Promise<MarketShareGrowthData[]> {
+    await new Promise(resolve => setTimeout(resolve, 500));
+
+    // Calculate total revenue per sector
+    const sectorRevenues: Record<string, number> = {};
+    DEMO_COMPANIES.forEach(company => {
+        const rev = company.revenue_current || 0;
+        if (!sectorRevenues[company.sector]) {
+            sectorRevenues[company.sector] = 0;
+        }
+        sectorRevenues[company.sector] += rev;
+    });
+
+    return DEMO_COMPANIES.map(company => {
+        const sectorTotal = sectorRevenues[company.sector] || 1; // avoid div by 0
+        const revenue = company.revenue_current || 0;
+        const marketShare = (revenue / sectorTotal) * 100;
+
+        return {
+            id: company.id,
+            name: company.name,
+            sector: company.sector,
+            growth: company.revenue_growth_rate || 0,
+            marketShare: parseFloat(marketShare.toFixed(2)),
+            revenue: revenue
+        };
+    });
 }

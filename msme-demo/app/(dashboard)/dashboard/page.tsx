@@ -14,7 +14,7 @@ import { format, subDays } from "date-fns"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { DateRangePicker } from "@/components/dashboard/date-range-picker"
-import { FinancialTrendsChart } from "@/components/dashboard/financial-trends-chart"
+import { MarketShareGrowthChart } from "@/components/dashboard/market-share-growth-chart"
 import { FunnelConversionChart } from "@/components/dashboard/funnel-conversion-chart"
 import { GeographicHeatmap } from "@/components/dashboard/geographic-heatmap"
 import { MetricCard } from "@/components/dashboard/metric-card"
@@ -25,7 +25,7 @@ import { SectorDistributionChart } from "@/components/dashboard/sector-distribut
 import { TopPerformersList } from "@/components/dashboard/top-performers-list"
 import {
     getDashboardMetrics,
-    getFinancialTrends,
+    getMarketShareGrowthData,
     getFunnelConversionData,
     getGeographicDistribution,
     getRAGDistribution,
@@ -58,9 +58,9 @@ export default function DashboardPage() {
         queryFn: () => getFunnelConversionData(),
     })
 
-    const { data: financialData } = useQuery({
-        queryKey: ["financial-trends", filters],
-        queryFn: () => getFinancialTrends(),
+    const { data: marketData } = useQuery({
+        queryKey: ["market-share-growth", filters],
+        queryFn: () => getMarketShareGrowthData(),
     })
 
     const { data: sectorData } = useQuery({
@@ -186,12 +186,12 @@ export default function DashboardPage() {
             <div className="grid gap-6 lg:grid-cols-2">
                 <Card className="p-6">
                     <div className="mb-4">
-                        <h3 className="text-lg font-semibold">Financial Trends</h3>
+                        <h3 className="text-lg font-semibold">Growth vs Market Share</h3>
                         <p className="text-sm text-muted-foreground">
-                            Revenue and profit over time
+                            Company performance matrix
                         </p>
                     </div>
-                    {financialData && <FinancialTrendsChart data={financialData} />}
+                    {marketData && <MarketShareGrowthChart data={marketData} />}
                 </Card>
 
                 <Card className="p-6">

@@ -85,3 +85,12 @@ export interface DashboardFilters {
     rag_status: ('green' | 'amber' | 'red')[];
     search_query: string;
 }
+
+export interface MarketShareGrowthData {
+    id: string;
+    name: string;
+    sector: string;
+    growth: number;
+    marketShare: number;
+    revenue: number;
+}
