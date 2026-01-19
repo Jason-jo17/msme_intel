@@ -164,6 +164,78 @@ export const DEMO_GAP_ANALYSES = {
             "Refactor monolithic components into microservices.",
             "Deploy AI support agents to handle L1 queries."
         ]
+    },
+    'aeq-001': {
+        market_saturation_score: 78,
+        founder_quality_score: 72,
+        business_maturity_score: 82,
+        market_opportunity_score: 88,
+        leadership_quality_score: 68,
+        innovation_differentiator_score: 76,
+        talent_pool_score: 78,
+        brand_identity_score: 70,
+        top_priority: "Succession Planning",
+        top_priority_score: 72,
+        key_asset: "Market Opportunity",
+        key_asset_score: 88,
+        overall_score: 75,
+        rag_distribution: { red: 2, amber: 4, green: 2 },
+        key_strengths: ["Tier-1 Airbus Supplier", "Integrated Ecosystem", "10,000-ton Press"],
+        top_opportunities: ["PLI Scheme", "Defense Export", "New Client Acquisition"],
+        vertical_analyses: [
+            { vertical_name: "Strategy", score: 70, gaps: ["No succession plan", "High debt"], opportunities: ["IPO Readiness", "Deleveraging"] },
+            { vertical_name: "Operations", score: 85, gaps: ["Consumer segment drag"], opportunities: ["Smart Factory L2"] },
+            { vertical_name: "Technology", score: 75, gaps: ["Low R&D Spend"], opportunities: ["IP Co-creation"] }
+        ],
+        recommendations: ["Formalize succession plan immediately.", "Hire CTO for digital roadmap.", "Refinance high-cost debt."]
+    },
+    'dyn-001': {
+        market_saturation_score: 72,
+        founder_quality_score: 88,
+        business_maturity_score: 92,
+        market_opportunity_score: 90,
+        leadership_quality_score: 90,
+        innovation_differentiator_score: 85,
+        talent_pool_score: 76,
+        brand_identity_score: 88,
+        top_priority: "Margin Expansion",
+        top_priority_score: 65,
+        key_asset: "Business Maturity",
+        key_asset_score: 92,
+        overall_score: 85,
+        rag_distribution: { red: 0, amber: 2, green: 6 },
+        key_strengths: ["Global Sole Source (Airbus)", "30-Year Succession", "R&D Depth"],
+        top_opportunities: ["A220 Door Ramp-up", "AMCA Program", "Metallurgy Turnaround"],
+        vertical_analyses: [
+            { vertical_name: "Strategy", score: 90, gaps: ["High Valuation"], opportunities: ["M&A"] },
+            { vertical_name: "Operations", score: 88, gaps: ["Metallurgy Volatility"], opportunities: ["Automation"] },
+            { vertical_name: "Technology", score: 85, gaps: [], opportunities: ["Defense R&D"] }
+        ],
+        recommendations: ["Accelerate A220 industrialization.", "Turnaround metallurgy division.", "Scale defense exports."]
+    },
+    'taal-001': {
+        market_saturation_score: 45,
+        founder_quality_score: 65,
+        business_maturity_score: 78,
+        market_opportunity_score: 75,
+        leadership_quality_score: 70,
+        innovation_differentiator_score: 55,
+        talent_pool_score: 60,
+        brand_identity_score: 62,
+        top_priority: "Operational Scale",
+        top_priority_score: 45,
+        key_asset: "Tangible Assets",
+        key_asset_score: 90,
+        overall_score: 68,
+        rag_distribution: { red: 2, amber: 4, green: 2 },
+        key_strengths: ["240-acre Airfield", "Debt-free", "High Margins"],
+        top_opportunities: ["MRO Hub", "Drone Testing", "Contract Manufacturing"],
+        vertical_analyses: [
+            { vertical_name: "Strategy", score: 65, gaps: ["Low Scale", "Tenant Dependence"], opportunities: ["Asset Monetization"] },
+            { vertical_name: "Operations", score: 70, gaps: ["Limited Order Book"], opportunities: ["Capacity Utilization"] },
+            { vertical_name: "Technology", score: 55, gaps: ["Low Innovation"], opportunities: ["UAV Partnerships"] }
+        ],
+        recommendations: ["Partner for MRO hub development.", "Diversify beyond tenant revenue.", "Invest in modern manufacturing tech."]
     }
 };
 

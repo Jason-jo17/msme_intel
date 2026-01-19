@@ -11,30 +11,31 @@ import { FileText, ArrowRight, Check } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { getCompanyById } from '@/lib/demo-data/companies';
 import { getDemoGapAnalysis } from '@/lib/demo-data/gap-analyses';
+import { NEW_COMPANIES } from '@/lib/demo-data/new-companies';
 
 export default function DemoGapMsgPage() {
     const params = useParams();
     const router = useRouter();
     const rawId = params.company_id as string;
-    // Normalize ID: "1" -> "comp-001"
-    const companyId = rawId.startsWith('comp-') ? rawId : `comp-${rawId.padStart(3, '0')}`;
+    const normalizedId = /^\d+$/.test(rawId) ? `comp-${rawId.padStart(3, '0')}` : rawId;
+    const companyId = normalizedId;
 
     const [loading, setLoading] = useState(true);
     const [result, setResult] = useState<any>(null);
     const [company, setCompany] = useState<any>(null);
 
     useEffect(() => {
-        const comp = getCompanyById(companyId);
+        const comp = getCompanyById(companyId) || NEW_COMPANIES.find((c: any) => c.id === companyId);
         if (comp) setCompany(comp);
     }, [companyId]);
 
     const handleLoadingComplete = () => {
-        setResult(getDemoGapAnalysis(companyId));
-        setLoading(false);
+        // Redirect to detailed gap analysis view
+        router.push(`/companies/${companyId}?tab=gap-analysis`);
     };
 
     const handleProceed = () => {
-        router.push(`/funnel/${rawId}/roadmap`);
+        router.push(`/companies/${companyId}?tab=roadmap`);
     };
 
     if (!company) return <div className="p-8">Loading...</div>;

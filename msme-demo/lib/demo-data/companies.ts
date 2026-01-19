@@ -1,5 +1,6 @@
 
 import { Company, CompanyStage, CompanySector } from '@/lib/types/company';
+import { NEW_COMPANIES } from './new-companies';
 
 // Local interface for the raw data structure
 interface RawCompany {
@@ -508,14 +509,37 @@ const mapToCompany = (raw: RawCompany): Company => {
     };
 };
 
+
 export const DEMO_COMPANIES: Company[] = RAW_DATA.map(mapToCompany);
+
+// Convert NEW_COMPANIES to basic Company type for listing/filtering
+const NEW_COMPANIES_BASIC: Company[] = NEW_COMPANIES.map(nc => ({
+    id: nc.id,
+    name: nc.name,
+    sector: nc.sector as CompanySector,
+    sub_sector: nc.sub_sector || 'Aerospace',
+    stage: nc.stage as CompanyStage,
+    founded_year: nc.founded_year,
+    headquarters_city: nc.headquarters_city,
+    headquarters_state: nc.headquarters_state,
+    website: nc.website,
+    employee_count: nc.employee_count,
+    revenue_current: nc.latest_revenue ? nc.latest_revenue * 10000000 : 0,
+    revenue_growth_rate: nc.revenue_growth_yoy,
+    current_stage: nc.current_stage,
+    rag_status: nc.rag_status,
+    created_at: nc.created_at,
+    updated_at: nc.updated_at
+}));
 
 export function getCompaniesBySector(sector: string): Company[] {
     return DEMO_COMPANIES.filter(c => c.sector === sector);
 }
 
 export function getCompaniesByFilter(filters: { sector?: string; stage?: number | string; search?: string }): Company[] {
-    let filtered = DEMO_COMPANIES;
+    // Combine new companies at the TOP of the list
+    let allCompanies = [...NEW_COMPANIES_BASIC, ...DEMO_COMPANIES];
+    let filtered = allCompanies;
 
     if (filters.sector && filters.sector !== 'all') {
         filtered = filtered.filter(c => c.sector === filters.sector);
@@ -524,7 +548,6 @@ export function getCompaniesByFilter(filters: { sector?: string; stage?: number 
     if (filters.stage && filters.stage !== 'all') {
         if (typeof filters.stage === 'string') {
             const stageStr = filters.stage.toLowerCase();
-            // Map filter string 'seed', 'early', etc. to the CompanyStage
             filtered = filtered.filter(c => c.stage === stageStr);
         }
     }
@@ -542,6 +565,10 @@ export function getCompaniesByFilter(filters: { sector?: string; stage?: number 
 }
 
 export function getCompanyById(id: string): Company | undefined {
+    // Check new detailed companies first
+    const newCompany = NEW_COMPANIES_BASIC.find(c => c.id === id);
+    if (newCompany) return newCompany;
+
     return DEMO_COMPANIES.find(c => c.id === id);
 }
 

@@ -13,9 +13,11 @@ export default function FunnelOverviewPage() {
     // const { data: companies, isLoading } = useQuery({ queryKey: ['funnel-companies'], ... });
 
     const recentCompanies = [
-        { id: '1', name: 'TechFlow Solutions', stage: 'Gap Analysis', stageNum: 5, status: 'In Progress' },
-        { id: '2', name: 'AgriGrowth India', stage: 'Thesis Score', stageNum: 2, status: 'Pending Review' },
-        { id: '3', name: 'Urban Retailers', stage: 'Upload', stageNum: 1, status: 'Completed' },
+        { id: 'aeq-001', name: 'Aequs Limited', stage: 'Gap Analysis', stageNum: 5, status: 'Action Required', lastUpdated: '10 mins ago' },
+        { id: 'dyn-001', name: 'Dynamatic Technologies', stage: 'Gap Analysis', stageNum: 5, status: 'In Progress', lastUpdated: '1 hour ago' },
+        { id: 'taal-001', name: 'Taneja Aerospace', stage: 'Gap Analysis', stageNum: 5, status: 'Ready for Review', lastUpdated: '2 hours ago' },
+        { id: '1', name: 'TechFlow Solutions', stage: 'Gap Analysis', stageNum: 5, status: 'In Progress', lastUpdated: '5 hours ago' },
+        { id: '2', name: 'AgriGrowth India', stage: 'Thesis Score', stageNum: 2, status: 'Pending Review', lastUpdated: '1 day ago' },
     ];
 
     return (

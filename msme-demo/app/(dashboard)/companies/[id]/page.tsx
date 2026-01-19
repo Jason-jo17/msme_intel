@@ -1,10 +1,13 @@
 
+
 'use client';
 
 import { useParams } from 'next/navigation';
 import { useDemoCompanies } from '@/lib/hooks/use-demo-companies';
 import { getDemoFinancials } from '@/lib/demo-data/financials';
 import { getDemoMCA } from '@/lib/demo-data/mca';
+import { getNewCompanyById } from '@/lib/demo-data/new-companies';
+import { DetailedCompanyView } from '@/components/companies/detailed-company-view';
 import { PageHeader } from '@/components/shared/page-header';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -20,8 +23,16 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/com
 export default function CompanyDetailPage() {
     const params = useParams();
     const id = params.id as string;
-    // Use demo hook instead of real backend hook
     const { getCompany } = useDemoCompanies();
+
+    // Check if it's one of the new detailed companies
+    const detailedCompany = getNewCompanyById(id);
+
+    if (detailedCompany) {
+        return <DetailedCompanyView company={detailedCompany} />;
+    }
+
+    // Fallback to legacy logic
     const company = getCompany(id);
     const mca = getDemoMCA(id);
     const financials = getDemoFinancials(id);
