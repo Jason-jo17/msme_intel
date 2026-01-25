@@ -552,6 +552,641 @@ export const NEW_COMPANIES: DetailedCompany[] = [
             time_to_opportunity_months: 24,
             probability_of_success_percentage: 60.0
         }
+    },
+    // COMPANY 4: HICAL TECHNOLOGIES
+    {
+        // Core Company Information
+        id: 'hical-001',
+        name: 'Hical Technologies Private Limited',
+        legal_name: 'Hical Technologies Private Limited (formerly Hical Aerospace Private Limited)',
+        cin: 'U31900KA2011PTC060176',
+        gstin: '29AACCH7296L1ZU',
+        pan: undefined, // Not disclosed in research
+        company_status: 'Active',
+        registration_date: '2011-08-26',
+        founded_year: 1988,
+
+        // Addresses
+        registered_office_address: 'Sy. No.46&47, Electronic City, Phase 2, Hosur Road, Bangalore, Karnataka - 560100',
+        corporate_office_address: 'Sy. No.46&47, Electronic City, Phase 2, Hosur Road, Bangalore, Karnataka - 560100',
+
+        // Location
+        headquarters_city: 'Bangalore',
+        headquarters_state: 'Karnataka',
+
+        // Classification
+        sector: 'aerospace',
+        sub_sector: 'Electromagnetics & Actuators',
+        industry_classification: 'Manufacture of Other Electrical Equipment N.E.C. (NIC Code 3190)',
+
+        // Online Presence
+        website: 'https://www.hical.com/',
+        linkedin_url: 'https://www.linkedin.com/company/hical-technologies-pvt-ltd/',
+
+        // Company Type & Structure
+        company_type: 'Private Limited Company',
+        listing_status: 'Unlisted',
+        stock_codes: undefined,
+        promoter_holding_percentage: 100.0,
+        market_cap: undefined, // Private company
+
+        // Capitalization
+        authorized_capital: 5.0,
+        paid_up_capital: 4.97,
+        net_worth: undefined, // Estimated ~35-40 Cr based on paid-up + growth
+
+        // Employee & Stage
+        employee_count: 517,
+        stage: 'growth',
+        current_stage: 5, // Established growth stage
+        rag_status: 'amber',
+        overall_score: 72,
+
+        // Financial Overview
+        latest_revenue: 212.2,
+        latest_net_profit: undefined, // Not disclosed; ICRA notes negative operating cash flow
+        revenue_growth_yoy: 36.0,
+
+        // Metadata
+        created_at: new Date().toISOString(),
+        updated_at: new Date().toISOString(),
+        data_confidence: 'MEDIUM-HIGH',
+        last_research_date: '2025-01-20',
+        notes: "Karnataka's premier aerospace electromagnetics specialist. 11-year UTC Gold Supplier. ISRO GOCO partner. High growth (36% YoY) but working capital stress and customer concentration risk.",
+
+        // ========================================================================
+        // FINANCIAL DATA
+        // ========================================================================
+        financials: [
+            {
+                fiscal_year: 'FY2025',
+                revenue: 212.2,
+                revenue_from_operations: undefined,
+                net_profit: 0,
+                net_margin_percentage: undefined,
+                ebitda: 0,
+                ebitda_margin_percentage: 14.0,
+                shareholders_equity: undefined,
+                long_term_debt: undefined,
+                short_term_debt: 82.5, // Working capital debt
+                debt_to_equity_ratio: 2.8, // TOL/TNW
+                revenue_growth_yoy: 36.0,
+                segment_breakdown: { "aerospace_defense": 80, "space": 12, "other": 8 },
+                data_source: 'Company disclosures, industry sources',
+                confidence: 'HIGH'
+            },
+            {
+                fiscal_year: 'FY2024',
+                revenue: 158.0,
+                revenue_from_operations: undefined,
+                net_profit: 0,
+                net_margin_percentage: undefined,
+                ebitda: 0,
+                ebitda_margin_percentage: 12.3,
+                shareholders_equity: undefined,
+                long_term_debt: undefined,
+                short_term_debt: 82.5,
+                debt_to_equity_ratio: 2.8,
+                revenue_growth_yoy: 12.5,
+                segment_breakdown: { "aerospace_defense": 80, "space": 12, "other": 8 },
+                data_source: 'ICRA Rating Report',
+                confidence: 'HIGH'
+            },
+            {
+                fiscal_year: 'FY2023',
+                revenue: 137.0,
+                revenue_from_operations: undefined,
+                net_profit: 0,
+                net_margin_percentage: undefined,
+                ebitda: 0,
+                ebitda_margin_percentage: 10.8,
+                shareholders_equity: undefined,
+                long_term_debt: undefined,
+                short_term_debt: 62.0,
+                debt_to_equity_ratio: undefined,
+                revenue_growth_yoy: 26.2,
+                segment_breakdown: undefined,
+                data_source: 'ICRA, Tracxn',
+                confidence: 'MEDIUM'
+            },
+            {
+                fiscal_year: 'FY2022',
+                revenue: 109.0,
+                revenue_from_operations: undefined,
+                net_profit: 0,
+                net_margin_percentage: undefined,
+                ebitda: 0,
+                ebitda_margin_percentage: undefined,
+                shareholders_equity: undefined,
+                long_term_debt: undefined,
+                short_term_debt: undefined,
+                debt_to_equity_ratio: undefined,
+                revenue_growth_yoy: 0,
+                segment_breakdown: undefined,
+                data_source: 'Estimated from growth rates',
+                confidence: 'MEDIUM'
+            },
+            {
+                fiscal_year: 'FY2021',
+                revenue: 95.0,
+                revenue_from_operations: undefined,
+                net_profit: 0,
+                net_margin_percentage: undefined,
+                ebitda: 0,
+                ebitda_margin_percentage: undefined,
+                shareholders_equity: undefined,
+                long_term_debt: undefined,
+                short_term_debt: undefined,
+                debt_to_equity_ratio: undefined,
+                revenue_growth_yoy: 0,
+                segment_breakdown: undefined,
+                data_source: 'Estimated; COVID-19 impact year',
+                confidence: 'LOW'
+            }
+        ],
+
+        // ========================================================================
+        // FOUNDERS
+        // ========================================================================
+        founders: [
+            {
+                name: 'Shashikiran Mullur',
+                age: undefined, // Not disclosed
+                current_role: 'Founder/Chairman',
+                years_in_sector: 38,
+                tenure_years: 37,
+                education: 'Not disclosed',
+                background: '38+ years in aerospace industry. Founded Hical in 1988. Also coffee planter in Malnad region.',
+                equity_stake: undefined, // Part of 100% promoter holding
+                is_promoter: true,
+                linkedin_url: undefined,
+                notable_achievements: [
+                    '11 consecutive years UTC/Collins Aerospace Gold Supplier',
+                    'ISRO GOCO contract holder',
+                    'Indian Offset Partner certification',
+                    '37 years operational history'
+                ]
+            },
+            {
+                name: 'Sujaya Shashikiran',
+                age: undefined,
+                current_role: 'Managing Director',
+                years_in_sector: 30,
+                tenure_years: 13,
+                education: 'SJCE Mysore (1979-84)',
+                background: '3+ decades in engineering, manufacturing, and administration',
+                equity_stake: undefined,
+                is_promoter: true,
+                linkedin_url: undefined,
+                notable_achievements: []
+            },
+            {
+                name: 'Jaiveer Yashas Shashikiran',
+                age: undefined,
+                current_role: 'Joint Managing Director',
+                years_in_sector: 9,
+                tenure_years: 9,
+                education: 'National University of Singapore',
+                background: 'Second-generation leader. Former Director of Business Development.',
+                equity_stake: undefined,
+                is_promoter: true,
+                linkedin_url: undefined,
+                notable_achievements: []
+            }
+        ],
+
+        // ========================================================================
+        // LEADERSHIP TEAM
+        // ========================================================================
+        leadership: [
+            {
+                name: 'Murali P',
+                role: 'CTO/Head Technology Center',
+                tenure_years: undefined,
+                total_experience_years: 25,
+                education: 'Gujarat Technological University',
+                background: 'Ex-ISRO, Ex-Moog India. Deep aerospace and defense technology expertise.',
+                is_executive_director: false,
+                is_independent_director: false
+            },
+            {
+                name: 'Mohammed Ajaz',
+                role: 'VP Operations',
+                tenure_years: undefined,
+                total_experience_years: undefined,
+                education: undefined,
+                background: 'Operations leadership',
+                is_executive_director: false,
+                is_independent_director: false
+            },
+            {
+                name: 'Thatti Suresh',
+                role: 'VP Business Development',
+                tenure_years: undefined,
+                total_experience_years: undefined,
+                education: undefined,
+                background: 'Sales and business development',
+                is_executive_director: false,
+                is_independent_director: false
+            },
+            {
+                name: 'Murali Nellepalli',
+                role: 'GM Finance',
+                tenure_years: undefined,
+                total_experience_years: undefined,
+                education: undefined,
+                background: 'Finance leadership',
+                is_executive_director: false,
+                is_independent_director: false
+            },
+            {
+                name: 'Soumya Venkatesh',
+                role: 'HCM Head',
+                tenure_years: undefined,
+                total_experience_years: undefined,
+                education: undefined,
+                background: 'Human capital management and sustainability',
+                is_executive_director: false,
+                is_independent_director: false
+            },
+            {
+                name: 'V.B. Venkatesh',
+                role: 'Independent Director',
+                tenure_years: undefined,
+                total_experience_years: undefined,
+                education: undefined,
+                background: '5 other directorships',
+                is_executive_director: false,
+                is_independent_director: true
+            }
+        ],
+
+        // ========================================================================
+        // BOARD COMPOSITION
+        // ========================================================================
+        board: {
+            total_board_members: 4,
+            executive_directors: 3,
+            independent_directors: 1,
+            succession_plan_exists: false,
+            succession_plan_details: 'No documented succession plan publicly available. Jaiveer Yashas Shashikiran (JMD) positioned as likely successor, but 3 of 4 directors are from same family creating high key person risk.',
+            governance_score: 65
+        },
+
+        // ========================================================================
+        // TALENT METRICS
+        // ========================================================================
+        talent: {
+            total_employees: 517,
+            permanent_employees: undefined,
+            employee_growth_yoy: -7.0,
+            glassdoor_rating: 2.7,
+            glassdoor_review_count: 20,
+            glassdoor_ceo_approval: 40,
+            glassdoor_recommend_to_friend: undefined,
+            glassdoor_top_pros: [
+                'Exposure to aerospace industry',
+                'Technical learning opportunities',
+                'Stable organization',
+                'Work with prestigious clients (ISRO, Collins)'
+            ],
+            glassdoor_top_cons: [
+                'Below-market compensation (15-20% lower)',
+                'Limited work-life balance',
+                'Hierarchical decision-making',
+                'Slow career progression',
+                '6-day work week concerns'
+            ],
+            critical_skills_missing: [
+                'Digital marketing expertise',
+                'Advanced manufacturing specialists',
+                'Software engineers for Industry 4.0',
+                'Senior finance talent (only GM-level)'
+            ],
+            high_turnover_roles: [
+                'Engineering roles (18% attrition)',
+                'Manufacturing staff',
+                'Mid-level management'
+            ]
+        },
+
+        // ========================================================================
+        // BRAND METRICS
+        // ========================================================================
+        brand: {
+            brand_awareness_level: 'National',
+            primary_markets: ['India', 'USA', 'Europe'],
+            certifications: [
+                { "name": "AS9100", "version": "Rev D", "certified": true },
+                { "name": "CEMILAC", "scope": "Design Approval", "certified": true },
+                { "name": "NADCAP", "scope": "Cable Harnesses (via YTPL)", "certified": true },
+                { "name": "ISO 9001:2015", "certified": true },
+                { "name": "ISRO GOCO", "certified": true },
+                { "name": "Indian Offset Partner", "certified": true },
+                { "name": "DST-NSTEDB Recognized", "certified": true }
+            ],
+            awards: [
+                { "award": "UTC/Collins Aerospace Gold Supplier", "year": 2024, "category": "11 consecutive years" },
+                { "award": "ISRO GOCO Contract", "category": "Strategic Partner" }
+            ],
+            marketing_sophistication: 'Basic',
+            tagline: undefined,
+            differentiation_claim: "Karnataka's premier aerospace electromagnetics specialist with 37 years operational history serving ISRO, HAL, and global OEMs"
+        },
+
+        // ========================================================================
+        // PRODUCTS
+        // ========================================================================
+        products: [
+            {
+                product_name: 'Electromechanical Actuators',
+                category: 'Actuators',
+                description: 'Linear and rotary actuators for aerospace applications including launch vehicles and aircraft control systems',
+                target_application: 'ISRO launch vehicles, aircraft control systems',
+                certifications: ['CEMILAC', 'AS9100'],
+                oem_approvals: ['ISRO', 'HAL']
+            },
+            {
+                product_name: 'DC Solenoids',
+                category: 'Electromagnetics',
+                description: 'Aerospace and defense-grade DC solenoids',
+                target_application: 'Tejas Mk2, various aircraft systems',
+                certifications: ['AS9100'],
+                oem_approvals: ['HAL', 'DRDO']
+            },
+            {
+                product_name: 'Aerospace Valves',
+                category: 'Flow Control',
+                description: 'Precision valves for aerospace applications',
+                target_application: 'Aircraft hydraulic and pneumatic systems',
+                certifications: ['AS9100'],
+                oem_approvals: ['Collins Aerospace', 'Honeywell']
+            },
+            {
+                product_name: 'Igniter Systems',
+                category: 'Propulsion Components',
+                description: 'Ignition systems for rocket motors',
+                target_application: 'Launch vehicle propulsion',
+                certifications: ['CEMILAC'],
+                oem_approvals: ['ISRO']
+            },
+            {
+                product_name: 'Cable Harnesses',
+                category: 'Interconnects',
+                description: 'Aerospace-grade cable harnesses via YTPL subsidiary (29.5% stake)',
+                target_application: 'Aircraft electrical systems',
+                certifications: ['NADCAP', 'AS9100'],
+                oem_approvals: []
+            },
+            {
+                product_name: 'Motors & Actuators',
+                category: 'Electromechanical',
+                description: 'Specialized motors and actuators for aerospace applications',
+                target_application: 'Aircraft systems',
+                certifications: ['AS9100'],
+                oem_approvals: ['Collins Aerospace']
+            }
+        ],
+
+        // ========================================================================
+        // INNOVATION METRICS
+        // ========================================================================
+        innovation: {
+            fiscal_year: 'FY2024',
+            rd_investment_percentage: undefined, // Not disclosed
+            rd_team_size: undefined, // Estimated 25-30% of engineering staff
+            patents_filed: undefined, // Not disclosed
+            patents_granted: 0,
+            new_products_launched: [],
+            technology_partners: [
+                'ISRO',
+                'DRDO',
+                'HAL',
+                'NSE Industries France (JV partner)'
+            ],
+            industry_4_adoption: 'Basic'
+        },
+
+        // ========================================================================
+        // CLIENTS
+        // ========================================================================
+        clients: [
+            {
+                client_name: 'Collins Aerospace (UTC)',
+                client_sector: 'Aerospace',
+                client_type: 'OEM',
+                revenue_contribution_percentage: 15.0,
+                is_top_3_client: true,
+                products_services: ['Actuators', 'Valves', 'Solenoids'],
+                has_long_term_contract: true,
+                relationship_duration_years: 11
+            },
+            {
+                client_name: 'ISRO',
+                client_sector: 'Space',
+                client_type: 'Government',
+                revenue_contribution_percentage: 12.0,
+                is_top_3_client: true,
+                products_services: ['Electromechanical Actuators', 'Igniter Systems'],
+                has_long_term_contract: true,
+                relationship_duration_years: 10
+            },
+            {
+                client_name: 'Honeywell',
+                client_sector: 'Aerospace',
+                client_type: 'OEM',
+                revenue_contribution_percentage: 10.0,
+                is_top_3_client: true,
+                products_services: ['Dedicated production line'],
+                has_long_term_contract: true,
+                relationship_duration_years: undefined
+            },
+            {
+                client_name: 'Woodward',
+                client_sector: 'Aerospace',
+                client_type: 'Tier-1',
+                revenue_contribution_percentage: 8.0,
+                is_top_3_client: false,
+                products_services: [],
+                has_long_term_contract: true,
+                relationship_duration_years: undefined
+            },
+            {
+                client_name: 'HAL (Hindustan Aeronautics Limited)',
+                client_sector: 'Defense',
+                client_type: 'Government',
+                revenue_contribution_percentage: 7.0,
+                is_top_3_client: false,
+                products_services: ['Solenoids for Tejas Mk2'],
+                has_long_term_contract: false,
+                relationship_duration_years: undefined
+            }
+        ],
+
+        // ========================================================================
+        // CLIENT DEMOGRAPHICS
+        // ========================================================================
+        client_demographics: {
+            top_3_clients_percentage: 37.0, // Collins 15% + ISRO 12% + Honeywell 10%
+            concentration_risk: 'HIGH', // Top 5 = 52%
+            defense_govt_percentage: 19.0, // ISRO 12% + HAL 7%
+            civil_aviation_percentage: undefined, // Included in aerospace
+            domestic_india_percentage: 50.0,
+            export_percentage: 50.0,
+            oem_percentage: 60.0 // Collins, Honeywell, and other OEMs
+        },
+
+        // ========================================================================
+        // GAP ANALYSIS
+        // ========================================================================
+        gap_analysis: {
+            overall_gap_score: 65,
+            investment_readiness: 'Cautious Optimism - High growth but execution risks',
+
+            // Market Saturation
+            market_saturation_score: 92, // Using 1-100 scale (was 8/10)
+            market_saturation_diagnosis: 'Low Penetration / High Growth',
+            market_saturation_assessment: 'Hical has captured only ~1.17% of India\'s $16.22B aerospace components TAM with current ₹158 Cr revenue (FY2024). Growing 2-3x faster than market (36% vs 6.37% CAGR) with 95%+ addressable market untapped.',
+            market_saturation_evidence: 'Revenue ₹212.2 Cr (FY2025) vs TAM ₹1,35,000 Cr = 1.17% penetration. 1,600+ aircraft orders and PLI scheme create massive growth runway.',
+
+            // Founder Quality
+            founder_quality_score: 70,
+            founder_quality_assessment: '38+ years aerospace experience with proven track record (11-year Gold Supplier, ISRO GOCO) but limited public profile and high key person concentration risk in family-owned structure.',
+            founder_quality_red_flags: [
+                'No documented succession plan',
+                'Over-concentration of decision-making in founding family',
+                'All 3 executive directors from same family',
+                '100% promoter holding limits external oversight',
+                'Limited professional management depth'
+            ],
+            founder_quality_green_flags: [
+                '38+ years sector experience (since 1988)',
+                '11 consecutive years UTC/Collins Gold Supplier status',
+                'Strategic ISRO GOCO partnership secured',
+                'Indian Offset Partner certification',
+                'Successfully navigated COVID-19 recovery (26% growth FY2023)',
+                'Second-generation succession in progress (Jaiveer as JMD)'
+            ],
+
+            // Business Maturity
+            business_maturity_score: 82,
+            business_maturity_assessment: 'Operational since 1988 (37 years) with established quality systems (AS9100, CEMILAC, NADCAP). Tier-1 supplier status with major OEMs. However, negative operating cash flow for 3 consecutive years and working capital stress indicate business model refinement needed.',
+
+            // Market Opportunity
+            market_opportunity_score: 88,
+            market_opportunity_assessment: 'Massive addressable market driven by India aviation boom (1,600+ aircraft orders), PLI scheme (₹1.97 lakh crore), Atmanirbhar Bharat (68% indigenous target), and China+1 supply chain shift.',
+            tam: 135000.00, // ₹1,35,000 Cr ($16.22B converted)
+            sam: 8000.00, // Karnataka aerospace + Hical segments
+            som: 650.00, // Realistically winnable over 5 years
+            current_penetration_percentage: 1.17,
+
+            // Leadership Quality
+            leadership_quality_score: 60,
+            leadership_quality_assessment: 'Second-generation succession planned with JMD in place; professional CTO from ISRO. However, family-dominated board (3 of 4 directors), only 1 independent director, and limited professional management depth.',
+            leadership_gaps: [
+                'Only 1 of 4 directors is independent',
+                'No documented succession plan',
+                'Limited professional management depth beyond VP level',
+                'Finance leadership at GM level (not CFO)',
+                'Family board dominance limits governance'
+            ],
+
+            // Innovation & Differentiation
+            innovation_differentiator_score: 60,
+            innovation_assessment: 'ISRO GOCO contract, CEMILAC design approval, and DST recognition demonstrate innovation capability. However, limited patent portfolio disclosure, no R&D investment visibility, and basic Industry 4.0 adoption.',
+            innovation_gaps: [
+                'No disclosed patents or IP portfolio',
+                'R&D investment percentage not disclosed',
+                'Basic digital manufacturing adoption',
+                'No advanced manufacturing (additive, automation)',
+                'Limited innovation pipeline visibility'
+            ],
+
+            // Talent Pool
+            talent_pool_score: 50,
+            talent_assessment: '517 employees with specialized aerospace skills and ₹30.4 Lakh revenue per employee (efficient). However, 7% workforce reduction, 2.7 Glassdoor rating, below-market compensation (15-20% lower), and 15% positive outlook signal serious talent challenges.',
+            talent_gaps: [
+                'Below-market compensation (15-20% lower than industry)',
+                'Poor work-life balance (2.5/5 rating)',
+                'High attrition rate (18% in engineering)',
+                '7% workforce reduction YoY (Aug 2024-2025)',
+                'Low employee morale (15% positive business outlook)',
+                'Limited career progression opportunities',
+                'Hierarchical decision-making culture'
+            ],
+
+            // Brand Identity
+            brand_identity_score: 60,
+            brand_assessment: 'Strong B2B recognition through 11-year UTC Gold Supplier status, ISRO partnership, and industry certifications. However, basic digital presence (website), minimal content marketing, and limited thought leadership.',
+            brand_gaps: [
+                'Basic website sophistication',
+                'Minimal content marketing or PR',
+                'Limited social media engagement (12K LinkedIn followers but low activity)',
+                'No thought leadership positioning',
+                'Weak digital marketing presence'
+            ],
+
+            // Consolidated Gaps & Strengths
+            critical_gaps: [
+                'Negative operating cash flow for 3 consecutive years',
+                'High working capital intensity (63% NWC/OI)',
+                'Customer concentration risk (52% from top 5 clients)',
+                'ICRA rating downgrade in FY2024 (subsequently reaffirmed)',
+                'Family board dominance (3 of 4 directors from same family)',
+                'Talent challenges (2.7 Glassdoor, 7% workforce reduction, 18% attrition)',
+                'Below-market employee compensation creating retention risk'
+            ],
+            moderate_gaps: [
+                'Limited innovation pipeline visibility (no patent disclosure)',
+                'Basic Industry 4.0 adoption',
+                'Weak digital marketing and thought leadership',
+                'Scale disadvantage vs larger competitors (₹158 Cr vs ₹650-1,470 Cr)',
+                'Private company constraints limiting growth capital access',
+                'Single independent director (limited governance oversight)'
+            ],
+            key_strengths: [
+                '11 consecutive years UTC/Collins Aerospace Gold Supplier',
+                'ISRO GOCO contract holder (strategic partnership)',
+                'Indian Offset Partner status',
+                '37 years operational history (since 1988)',
+                '36% revenue growth in FY2025',
+                '95%+ addressable market untapped',
+                'Strategic positioning in high-growth sector (aerospace/defense)',
+                'Zero-defect quality track record',
+                'Established relationships with major global OEMs'
+            ],
+
+            // Recommendations
+            immediate_actions: [
+                'Address working capital stress - reduce NWC/OI from 63% to <50%',
+                'Document formal succession plan with clear timeline',
+                'Launch employee retention program with market-competitive compensation',
+                'Diversify customer base - reduce top 5 concentration from 52%',
+                'Apply for PLI scheme funding to access growth capital',
+                'Hire CFO-level finance leadership (currently GM-level)'
+            ],
+            short_term_recommendations: [
+                'Achieve positive operating cash flow (currently negative 3 years)',
+                'Add 2-3 independent directors to board for governance',
+                'Improve employee compensation to market rates (currently 15-20% below)',
+                'Enhance digital marketing and establish thought leadership',
+                'Expand MRO services via Hical-NSE JV',
+                'Build innovation pipeline visibility (patents, R&D disclosure)'
+            ],
+            medium_term_recommendations: [
+                'Scale to ₹500-750 Cr revenue within 5 years',
+                'Develop proprietary IP portfolio (patents in actuators/solenoids)',
+                'Upgrade Industry 4.0 capabilities (automation, digital manufacturing)',
+                'Consider strategic investor for growth capital and governance',
+                'Expand defense sector penetration (Tejas Mk2, other HAL programs)',
+                'Establish second manufacturing facility or expand capacity',
+                'Build stronger employer brand to reduce attrition'
+            ],
+
+            // Investment Metrics
+            time_to_opportunity_months: 24,
+            probability_of_success_percentage: 68.0
+        }
     }
 ];
 
